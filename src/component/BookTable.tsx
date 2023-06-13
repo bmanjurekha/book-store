@@ -1,8 +1,16 @@
+/**
+ * Author: Manjurekha
+ * Date: 12th June
+ * 
+ * This file is a BookTable component which is used to display Table of books with Book Title, Author, Quantity.
+ * Using user role from local storage other operations are displayed, like Order Book for User/Admin User,  Edit/ Delete books for Admin User
+ *  
+ * 
+ * 
+ */
 import { Book } from "../model/book"
 import { ReactComponent as AddIcon } from '../assets/216373_plus_icon.svg';
 import { ReactComponent as MinusIcon } from '../assets/216340_minus_icon.svg';
-import { useState } from "react";
-import { setConstantValue } from "typescript";
 interface BookTableProps {
   books: Array<Book>;
 }
@@ -15,9 +23,10 @@ const BookTable = ({books}: BookTableProps) => {
    console.log(qty);
   };
   
-  let token = localStorage.getItem('access_token');
+  
   let role = localStorage.getItem('role');
-  if(token === null)
+  //Guest User
+  if(role === null)
   {
     
       const bookElements = books.map(book => (
@@ -44,10 +53,10 @@ const BookTable = ({books}: BookTableProps) => {
       )
     
   }
-  else
+  //Admin User
+  else if(role === 'ADMIN')
   {
-    if(role === 'ADMIN')
-    {
+   
       const bookElements = books.map(book => (
         <tr className="trData">
           <td className="tdData">{book.title}</td>
@@ -84,9 +93,10 @@ const BookTable = ({books}: BookTableProps) => {
           </tbody>
         </table>
       )
-    }
-    else
-    {
+  }
+  //User
+  else if(role === 'USER')
+  {
         const bookElements = books.map(book => (
           <tr className="trData">
             <td>{book.title}</td>
@@ -119,7 +129,13 @@ const BookTable = ({books}: BookTableProps) => {
           </table>
         )
     }
-  }
+    else
+    {
+      return (
+        <></>
+      )
+    }
+  
 }
 
 export default BookTable;

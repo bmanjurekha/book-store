@@ -1,3 +1,16 @@
+/**
+ * Author: Manjurekha
+ * Date: 12th June
+ * 
+ * This file is a BookPage.tsx which contains BookTable component. Here we are getting user role from local storge.
+ * Based on the user role = 'Guest User' or 'User' or 'Admin' page is set accordingly
+ * Using Search field user can search books 
+ * Using hook - booksApi we get all books or searched books
+ *  
+ * 
+ * 
+ */
+
 import { useState } from "react";
 import BookTable from "../component/BookTable";
 import { UsegetBooks } from "../hook/booksApi";

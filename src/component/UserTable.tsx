@@ -24,7 +24,7 @@ const UserTable = ({users}: UserTableProps) => {
     <tr className="trData">
       <td>{user.username}</td>
       <td>{user.role}</td>
-      <td></td>
+      <td>{user.purchases?.reduce((sum, current) => sum + current.quantity, 0)}</td>
       <td>
       <button className={user.role==='ADMIN'?"btnPromotelGrey":"btnPromote"} onClick={() => promoteUser(user.username)} disabled={user.role==='ADMIN'?true:false}  type="submit">Promote</button>
       {isPromote && <PromoteUserForm action="Promote" username={username} />}

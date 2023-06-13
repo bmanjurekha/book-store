@@ -4,7 +4,7 @@
  * 
  * This file is a LoginForm.tsx component which contains form to submit user name n password.
  * setting the form properties. This component has useState  which holds current state and can change over time.
- * Using react router dom - Link to sign up register page if there is no account.
+ * Using react router dom - Link to redirect user to sign up or register page if there is no account.
  * 
  */
 

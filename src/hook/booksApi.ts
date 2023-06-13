@@ -1,3 +1,12 @@
+/**
+ * Author: Manjurekha
+ * Date: 12th June
+ * 
+ * This file is a booksApi.ts file which is used to get the all books or searched books. 
+ * 
+ * 
+ * 
+ */
 import {  useState } from "react"
 import { Book } from "../model/book"
 import axios from "axios";
