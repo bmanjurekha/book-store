@@ -1,3 +1,12 @@
+/**
+ * Author: Manjurekha
+ * Date: 12th June
+ * 
+ * This file is a RegisterForm.tsx component which contains form to submit user name n password.
+ * setting the form properties. This component has useState  which holds current state and can change over time.
+ * Using react router dom - Link to redirect user to sign in or login page if user already has account.
+ * 
+ */
 import { FormEvent, useState } from "react";
 import { Link } from 'react-router-dom';
 

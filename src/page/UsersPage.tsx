@@ -1,3 +1,13 @@
+/**
+ * Author: Manjurekha
+ * Date: 12th June
+ * 
+ * This file is a UsersPage.tsx which contains UserTable component. Here we are getting user role from local storge.
+ *  Here admin can add books , see users by onclick event.
+ *  
+ * 
+ * 
+ */
 import axios from "axios";
 import { useState } from "react";
 import UserTable from "../component/UserTable";

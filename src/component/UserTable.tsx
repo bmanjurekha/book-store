@@ -10,6 +10,7 @@ const UserTable = ({users}: UserTableProps) => {
   const[username,setUsername] = useState('');
   const [isPromote, setIsPromote] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
+  
   const promoteUser = (username : string) => {
     setUsername(username);
     setIsPromote(true);

@@ -204,10 +204,36 @@ margin: 0em 0em 0em 5em;
   padding: 1em;
   border: 0px;
 }
+.modalClose{
+  display: none;
+  z-index: 0;
+  top:none;
+}
+.modal-content-close{
+  display: none;
+}
+.modal-p{
+  display: block;
+}
+.modal-p2{
+  display: block;
+}
+.modal-btn{
+  display: block;
+}
+.modal-p-close{
+  display: none;
+}
+.modal-p2-close{
+  display: none;
+}
+.modal-btn-close{
+  display: none;
+}
 .modal {
   display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 10; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -219,6 +245,7 @@ margin: 0em 0em 0em 5em;
 }
 /* Modal Content */
 .modal-content {
+  display: block;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;

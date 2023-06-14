@@ -1,4 +1,14 @@
-
+/**
+ * Author: Manjurekha
+ * Date: 12th June
+ * 
+ * This file is a RegisterPage.tsx file which contains
+ * RegisterForm component & function to handle on submit event
+ * Using axios Post - username and password in JSON format is posted to api server
+ * On Successfull Register its redirected to login page .
+ * 
+ * 
+ */
 import axios from "axios";
 import { useState } from "react"
 import RegisterForm from "../component/RegisterForm";
