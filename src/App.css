@@ -22,7 +22,8 @@
   color: black;
   font-weight: 100;
 }
-.login-page{
+
+.login-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +31,8 @@
   background-color: lightgrey;
   margin: 10em 0em 0em 27em;
 }
-.dvGrey{
+
+.dvGrey {
   background-color: gray;
   width: 25em;
   display: flex;
@@ -39,38 +41,42 @@
   color: white;
   margin: 1em;
 }
+
 .lrTxt {
   width: 100%;
-    padding: 1em 7em;
-    margin: 1em 0; 
-    display: inline-block;
-    border: 0px solid #ccc;
-    border-radius: 4px; 
-    box-sizing: border-box;
+  padding: 1em 7em;
+  margin: 1em 0;
+  display: inline-block;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
-.signin-button{
+
+.signin-button {
   width: 100%;
-    padding: 1em 7em;
-    margin: 8px 0;
-    display: inline-block;
-    border: 0px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background: gray;
+  padding: 1em 7em;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: gray;
 
 }
-.guestuser-button{
+
+.guestuser-button {
   width: 100%;
-    padding: 1em 7em;
-    margin: 8px 0;
-    display: inline-block;
-    border: 0px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background: white;
+  padding: 1em 7em;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: white;
 
 }
-.btnQty{
+
+.btnQty {
   display: inline-block;
   border: 0px solid #ccc;
   border-radius: 4px;
@@ -78,7 +84,8 @@
   background: gray;
   color: white;
 }
-.btnEdit{
+
+.btnEdit {
   display: inline-block;
   border: 0px solid #ccc;
   border-radius: 4px;
@@ -87,7 +94,8 @@
   padding: 1em;
   color: white;
 }
-.btnDelete{
+
+.btnDelete {
   display: inline-block;
   border: 0px solid #ccc;
   border-radius: 4px;
@@ -97,7 +105,8 @@
   margin: 1em 0em 1em 1em;
   color: white;
 }
-.btnPromote{
+
+.btnPromote {
   display: inline-block;
   border: 0px solid #ccc;
   border-radius: 4px;
@@ -106,16 +115,18 @@
   padding: 1em;
   color: white;
 }
-.btnPromotelGrey{
+
+.btnPromotelGrey {
   display: inline-block;
   border: 0px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  background:rgb(158, 157, 157) ;
+  background: rgb(158, 157, 157);
   padding: 1em;
   color: white;
 }
-.btnQtylGrey{
+
+.btnQtylGrey {
   display: inline-block;
   border: 0px solid #ccc;
   border-radius: 4px;
@@ -123,7 +134,8 @@
   background: rgb(158, 157, 157);
   color: white;
 }
-.btnDeletelGrey{
+
+.btnDeletelGrey {
   display: inline-block;
   border: 0px solid #ccc;
   border-radius: 4px;
@@ -133,8 +145,8 @@
   margin: 1em 0em 1em 1em;
   color: white;
 }
-.btnSignIn
-{
+
+.btnSignIn {
   display: inline-block;
   border: 0px solid #ccc;
   border-radius: 4px;
@@ -144,114 +156,114 @@
   padding: 1em;
   background-color: white;
 }
-.bookTable{
+
+.bookTable {
   width: 45em;
   margin: 1em 20em;
 }
-.trHead{
+
+.trHead {
   background-color: gray;
   color: white;
   height: 5em;
 }
-.trData{
+
+.trData {
   background-color: lightgray;
   text-align: center;
   height: 3em;
 }
-.searchTxt{
+
+.searchTxt {
   width: 27em;
   margin: 0em 24em;
   padding: 1em 7em;
   display: inline-block;
   border: 1px solid #ccc;
-    border-radius: 4px; 
-    box-sizing: border-box;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
-.qtTxt{
-width: 1em;
+
+.qtTxt {
+  width: 1em;
 }
-.lblUsrname{
+
+.lblUsrname {
   font-weight: 100;
   font-size: medium;
   margin: 0em 0em 0em 70em;
 }
-.tdData{
-width: 14em;
+
+.tdData {
+  width: 14em;
 }
-.toprightdv{
-margin: 0em 0em 0em 5em;
+
+.toprightdv {
+  margin: 0em 0em 0em 5em;
 }
-.btntoprightAddBook{
+
+.btntoprightAddBook {
   background-color: gray;
   width: 9em;
   color: white;
   padding: 1em;
-  margin :0em 9em 0em -18em;
+  margin: 0em 9em 0em -18em;
   border: 0px;
 }
-.btntoprightBook{
+
+.btntoprightBook {
   background-color: gray;
   width: 5em;
   color: white;
   padding: 1em;
-  margin :0em 1em 0em -8em;
+  margin: 0em 1em 0em -8em;
   border: 0px;
 }
-.btntoprightUsr{
+
+.btntoprightUsr {
   background-color: gray;
   width: 5em;
   color: white;
   padding: 1em;
   border: 0px;
 }
-.modalClose{
-  display: none;
-  z-index: 0;
-  top:none;
-}
-.modal-content-close{
-  display: none;
-}
-.modal-p{
+
+.modalOpen {
   display: block;
-}
-.modal-p2{
-  display: block;
-}
-.modal-btn{
-  display: block;
-}
-.modal-p-close{
-  display: none;
-}
-.modal-p2-close{
-  display: none;
-}
-.modal-btn-close{
-  display: none;
-}
-.modal {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  position: fixed;
+  /* Stay in place */
+  z-index: 10;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
+
+.modalClose {
+  display: none;
+  /* Hidden by default */
+}
+
 /* Modal Content */
 .modal-content {
-  display: block;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
 }
+
 .App-link {
   color: #61dafb;
 }
@@ -260,6 +272,7 @@ margin: 0em 0em 0em 5em;
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

@@ -14,59 +14,59 @@ import { Link } from 'react-router-dom';
 
 
 type submitHandler = (username: string, password: string) => void;
- 
+
 interface LoginFormProps {
   onSubmit: submitHandler;
 }
 
-const LoginForm = ({onSubmit}: LoginFormProps) => {
+const LoginForm = ({ onSubmit }: LoginFormProps) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSigninSubmit = (event: FormEvent) => {
     event.preventDefault();
     onSubmit(username, password);
-    
+
   }
 
-return (
+  return (
     <>
-    
+
       <form onSubmit={handleSigninSubmit}>
-          <div>
-              <label>Username</label>
-          </div>
-          <div>
-              <input 
-              type="text" 
-              placeholder="Type your username..." 
-              className="lrTxt"
-              value={username}      
-              onChange={e => setUsername(e.target.value)}         
-              />
-          </div>
-          <div>
-              <label>Password</label>
-          </div>
-          <div>
-              <input 
-              type="password" 
-              placeholder="Type your password..."
-              className="lrTxt"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              />
-          </div>
-          <div>
-            
-              <label>No Account? Sign up<Link to="./Register"> here!</Link></label>
-          </div>
-          <div>
+        <div>
+          <label>Username</label>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Type your username..."
+            className="lrTxt"
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Password</label>
+        </div>
+        <div>
+          <input
+            type="password"
+            placeholder="Type your password..."
+            className="lrTxt"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
+        </div>
+        <div>
+
+          <label>No Account? Sign up<Link to="./Register"> here!</Link></label>
+        </div>
+        <div>
           <button className='signin-button' type="submit">Sign in</button>
-          </div>
+        </div>
       </form>
     </>
   )
 }
 
-  export default LoginForm;
+export default LoginForm;

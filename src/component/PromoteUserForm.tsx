@@ -1,51 +1,63 @@
-import { useState } from "react";
-import { UsepromoteUsers } from "../hook/promoteusersApi";
-import { UsedeleteUsers } from "../hook/deleteusersApi";
-import {  useNavigate } from "react-router-dom";
-interface PromoteUsrProps{
-    username : string;
-    action : string;
-}
-const PromoteUserForm = ({username,action}:PromoteUsrProps) => {
+/**
+ * Author: Manjurekha
+ * Date: 15th June
+ * 
+ * This file is a PromoteUserForm.tsx component which contains modal pop-up to get a confirmation to Promote/Delete User from Admin
+ * Based on the Action={Promote/Delete} performed by Admin in User Page,Admin User will be prompted with confirmation dialog either to Promote User or to Delete User
+ * Hooks are used to promote users or to delete users using APIs
+ * Confirmation dialog is cancled Admin user will be navigated back to Users Page 
+ * 
+ */
 
-    const [isOpen, setIsOpen] = useState(true);
-    
+import { useState } from "react";
+import { usepromoteUsers } from "../hook/promoteusersApi";
+import { usedeleteUsers } from "../hook/deleteusersApi";
+import { useNavigate } from "react-router-dom";
+interface PromoteUsrProps {
+    username: string;
+    action: string;
+    isOpen: boolean;
+}
+const PromoteUserForm = ({ username, action, isOpen }: PromoteUsrProps) => {
+
     const navigate = useNavigate()
-    const onProceedClick = (username:string,action:string) => {
-        if(action==='Promote'){
-            UsepromoteUsers(username);
+    const onProceedClick = (username: string, action: string) => {
+        if (action === 'Promote') {
+            usepromoteUsers(username);
+            isOpen = false;
             navigate('/Users');
-            setIsOpen(false);
+
         }
         else {
-            UsedeleteUsers(username);
+            usedeleteUsers(username);
+            isOpen = false;
             navigate('/Users');
-            setIsOpen(false);
+
         }
-        
-       };
+
+    };
     const navigateToUser = () => {
-        setIsOpen(false);
+        isOpen = false;
         navigate('/Users');
-       };
-    
-return (
-    <>
-    <div className={isOpen?"modal":"modalClose"} >
-        <div className={isOpen?"modal-content":"modal-content-close"}>
-            <div className={isOpen?"modal-p":"modal-p-close"}>
-                <p>Change User Settings</p>
+    };
+
+    return (
+        <>
+            <div className={isOpen ? "modalOpen" : "modalClose"} >
+                <div className="modal-content">
+                    <div >
+                        <p>Change User Settings</p>
+                    </div>
+                    <div >
+                        <p>Are you sure you wish to {action}  user  {username} </p>
+                    </div>
+                    <div >
+                        <button className="btnDelete" onClick={() => onProceedClick(username, action)} type="submit">Proceed</button>
+                        <button className="btnDelete" onClick={navigateToUser} type="submit">Cancel</button>
+                    </div>
+                </div>
             </div>
-            <div className={isOpen?"modal-p2":"modal-p2-close"}>
-            <p>Are you sure you wish to {action}  user  {username} </p>    
-            </div>
-            <div className={isOpen?"modal-btn":"modal-btn-close"}>
-            <button className="btnDelete"  onClick={() => onProceedClick(username,action)}  type="submit">Proceed</button>
-            <button className="btnDelete"  onClick={navigateToUser}  type="submit">Cancel</button>
-            </div>
-       </div>
-    </div>
-    </>
+        </>
     )
 }
 export default PromoteUserForm;

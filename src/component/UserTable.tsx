@@ -1,3 +1,12 @@
+/**
+ * Author: Manjurekha
+ * Date: 15th June
+ * 
+ * This file is a User Table component , which is used to display information about the user like Username, his role & number of books he has purchased 
+ * This component also supports to Promote & delete users using Actions
+ * 
+ */
+
 import { useState } from "react";
 import { User } from "../model/users"
 import PromoteUserForm from "./PromoteUserForm";
@@ -6,31 +15,31 @@ interface UserTableProps {
 }
 
 
-const UserTable = ({users}: UserTableProps) => {
-  const[username,setUsername] = useState('');
+const UserTable = ({ users }: UserTableProps) => {
+  const [username, setUsername] = useState('');
   const [isPromote, setIsPromote] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
-  
-  const promoteUser = (username : string) => {
+
+  const promoteUser = (username: string) => {
     setUsername(username);
     setIsPromote(true);
     setIsDelete(false);
-   };
-   const deleteUser = (username : string) => {
+  };
+  const deleteUser = (username: string) => {
     setUsername(username);
     setIsPromote(false);
     setIsDelete(true);
-   };
+  };
   const userElements = users.map(user => (
     <tr className="trData">
       <td>{user.username}</td>
       <td>{user.role}</td>
       <td>{user.purchases?.reduce((sum, current) => sum + current.quantity, 0)}</td>
       <td>
-      <button className={user.role==='ADMIN'?"btnPromotelGrey":"btnPromote"} onClick={() => promoteUser(user.username)} disabled={user.role==='ADMIN'?true:false}  type="submit">Promote</button>
-      {isPromote && <PromoteUserForm action="Promote" username={username} />}
-      <button className={user.role==='ADMIN'?"btnDeletelGrey":"btnDelete"} onClick={() => deleteUser(user.username)} type="submit">Delete</button>
-      {isDelete && <PromoteUserForm action="Delete" username={username} />}
+        <button className={user.role === 'ADMIN' ? "btnPromotelGrey" : "btnPromote"} onClick={() => promoteUser(user.username)} disabled={user.role === 'ADMIN' ? true : false} type="submit">Promote</button>
+        {isPromote && <PromoteUserForm action="Promote" isOpen={true} username={username} />}
+        <button className={user.role === 'ADMIN' ? "btnDeletelGrey" : "btnDelete"} onClick={() => deleteUser(user.username)} type="submit">Delete</button>
+        {isDelete && <PromoteUserForm action="Delete" isOpen={true} username={username} />}
       </td>
     </tr>
   ));
@@ -51,6 +60,6 @@ const UserTable = ({users}: UserTableProps) => {
     </table>
   )
 }
-  
+
 
 export default UserTable;
