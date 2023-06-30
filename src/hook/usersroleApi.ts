@@ -10,7 +10,7 @@
 
 import axios from "axios";
 
-const usegetUserRole = (accesstoken: string) => {
+const UsegetUserRole = (accesstoken: string) => {
   let resp;
   resp = axios.get("http://localhost:3000/library/profile", { headers: { 'Authorization': accesstoken } })
     .then(response => {
@@ -24,4 +24,4 @@ const usegetUserRole = (accesstoken: string) => {
 }
 
 
-export { usegetUserRole };
+export { UsegetUserRole };

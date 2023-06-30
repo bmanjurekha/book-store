@@ -8,7 +8,7 @@
  * 
  */
 import axios from "axios";
-const usepromoteUsers = (username: string) => {
+const UsepromoteUsers = (username: string) => {
   const promotuserPayload = { "username": username };
   let resp;
   resp = axios.put("http://localhost:3000/admin/users", promotuserPayload, { headers: { 'Authorization': localStorage.getItem('access_token') } })
@@ -19,4 +19,4 @@ const usepromoteUsers = (username: string) => {
 }
 
 
-export { usepromoteUsers };
+export { UsepromoteUsers };

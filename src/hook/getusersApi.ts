@@ -12,7 +12,7 @@ import { useState } from "react"
 import axios from "axios";
 import { User } from "../model/users"
 
-const usegetUsers = (query: string) => {
+const UsegetUsers = (query: string) => {
   const [users, setUsers] = useState([] as Array<User>);
   let resp;
   resp = axios.get("http://localhost:3000/admin/users", { headers: { 'Authorization': localStorage.getItem('access_token') } })
@@ -28,4 +28,4 @@ const usegetUsers = (query: string) => {
 }
 
 
-export { usegetUsers };
+export { UsegetUsers };

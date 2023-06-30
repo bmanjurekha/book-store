@@ -15,7 +15,7 @@
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import LoginForm from "../component/LoginForm";
-import { usegetUserRole } from '../hook/usersroleApi';
+import { UsegetUserRole } from '../hook/usersroleApi';
 
 const LoginPage = () => {
 
@@ -30,7 +30,7 @@ const LoginPage = () => {
           localStorage.setItem('username', username);
           localStorage.setItem('access_token', response.data.accessToken);
           localStorage.setItem('isAuthUser', "true");
-          usegetUserRole(response.data.accessToken);
+          UsegetUserRole(response.data.accessToken);
           navigate('/Book');
         }
       })

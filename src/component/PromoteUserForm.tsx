@@ -10,8 +10,8 @@
  */
 
 import { useState } from "react";
-import { usepromoteUsers } from "../hook/promoteusersApi";
-import { usedeleteUsers } from "../hook/deleteusersApi";
+import { UsepromoteUsers } from "../hook/promoteusersApi";
+import { UsedeleteUsers } from "../hook/deleteusersApi";
 import { useNavigate } from "react-router-dom";
 interface PromoteUsrProps {
     username: string;
@@ -23,13 +23,13 @@ const PromoteUserForm = ({ username, action, isOpen }: PromoteUsrProps) => {
     const navigate = useNavigate()
     const onProceedClick = (username: string, action: string) => {
         if (action === 'Promote') {
-            usepromoteUsers(username);
+            UsepromoteUsers(username);
             isOpen = false;
             navigate('/Users');
 
         }
         else {
-            usedeleteUsers(username);
+            UsedeleteUsers(username);
             isOpen = false;
             navigate('/Users');
 

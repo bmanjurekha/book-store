@@ -11,14 +11,14 @@
 import axios from "axios";
 import { useState } from "react";
 import UserTable from "../component/UserTable";
-import { usegetUsers } from "../hook/getusersApi";
+import { UsegetUsers } from "../hook/getusersApi";
 import { useNavigate } from 'react-router-dom';
 
 const UsersPage = () => {
 
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
-  const { users } = usegetUsers(query);
+  const { users } = UsegetUsers(query);
 
   const navigatetoBooks = () => {
     navigate('/Book');

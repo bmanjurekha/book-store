@@ -11,7 +11,7 @@ import { useState } from "react"
 import { Book } from "../model/book"
 import axios from "axios";
 
-const usegetBooks = (query: string) => {
+const UsegetBooks = (query: string) => {
   const [books, setBooks] = useState([] as Array<Book>);
   const timeoutId = setTimeout(async () => {
     let resp;
@@ -27,4 +27,4 @@ const usegetBooks = (query: string) => {
   return { books };
 }
 
-export { usegetBooks };
+export { UsegetBooks };

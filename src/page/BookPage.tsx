@@ -13,7 +13,7 @@
 
 import { useState } from "react";
 import BookTable from "../component/BookTable";
-import { usegetBooks } from "../hook/booksApi";
+import { UsegetBooks } from "../hook/booksApi";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -21,7 +21,7 @@ const BookPage = () => {
 
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
-  const { books } = usegetBooks(query);
+  const { books } = UsegetBooks(query);
 
   const navigatetoBooks = () => {
     navigate('/Book');
