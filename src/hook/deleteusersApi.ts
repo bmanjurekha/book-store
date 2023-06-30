@@ -8,7 +8,7 @@
  * 
  */
 import axios from "axios";
-const usedeleteUsers = (username: string) => {
+const UsedeleteUsers = (username: string) => {
   const deleteuserPayload = { "username": username };
   let resp;
   resp = axios.delete("http://localhost:3000/admin/users",
@@ -23,4 +23,4 @@ const usedeleteUsers = (username: string) => {
 }
 
 
-export { usedeleteUsers };
+export { UsedeleteUsers };
